@@ -23,6 +23,8 @@ Route::get('dashboard', function() {
     return view('dashboard');
 });
 
+// Route::get('dashboard', Dashboard::class)->name('dashboard');
+
 Route::get('login', [SessionController::class,'index'])->middleware('guest')->name('login');
 Route::post('login', [SessionController::class,'store'])->middleware('guest');
 Route::get('logout', [SessionController::class,'destroy'])->middleware('auth');

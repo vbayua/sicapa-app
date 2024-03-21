@@ -15,8 +15,5 @@
         </nav>
     </x-slot>
 
-    <h1>
-        Hello {{auth()->user()->name ?? 'Friend'}}
-    </h1>
-
+    
 </x-layout>
