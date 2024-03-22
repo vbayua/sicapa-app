@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('issues', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('persyaratan');
+            $table->text('root_cause_analysis');
+            $table->text('evaluation');
+            $table->foreignId('category_id');
+            $table->foreignId('level_id');
+            $table->foreignId('status_id');
+            $table->foreignId('user_id')->nullable();
             $table->timestamps();
         });
     }

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('corrective_actions', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->timestamp('due_date');
+            $table->string('attachment_link');
             $table->timestamps();
         });
     }
