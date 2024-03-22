@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->timestamp('due_date');
             $table->string('attachment_link');
+            $table->foreignId('issue_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

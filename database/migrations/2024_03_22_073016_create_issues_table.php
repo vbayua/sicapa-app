@@ -14,13 +14,16 @@ return new class extends Migration
         Schema::create('issues', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('persyaratan');
-            $table->text('root_cause_analysis');
-            $table->text('evaluation');
+            $table->string('status');
+            $table->text('persyaratan')->nullable();
+            $table->text('root_cause_analysis')->nullable();
+            $table->text('evaluation')->nullable();
+            $table->foreignId('capa_id')->constrained()->cascadeOnDelete();
             $table->foreignId('category_id');
-            $table->foreignId('level_id');
-            $table->foreignId('status_id');
+            $table->foreignId('ca_id')->nullable();
+            $table->foreignId('pa_id')->nullable();
             $table->foreignId('user_id')->nullable();
+            $table->timestamp('due_date');
             $table->timestamps();
         });
     }
