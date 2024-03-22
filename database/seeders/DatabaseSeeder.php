@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Capa;
+use App\Models\Category;
+use App\Models\Issue;
 use App\Models\User;
 use App\Models\Role;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -36,5 +39,19 @@ class DatabaseSeeder extends Seeder
             'password' => 'password',
             'role_id' => $role3->id
         ]);
+
+
+        $capa = Capa::factory()->create();
+
+        Issue::factory(5)->create([
+            'capa_id' => $capa->id,
+        ]);
+
+        $capa = Capa::factory()->create();
+
+        Issue::factory(5)->create([
+            'capa_id' => $capa->id,
+        ]);
+
     }
 }

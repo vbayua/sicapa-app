@@ -11,7 +11,7 @@ class Issue extends Model
 
     public function capa()
     {
-        return $this->belongsTo(Capa::class, 'capa_id');
+        return $this->belongsTo(Capa::class);
     }
 
     public function user()

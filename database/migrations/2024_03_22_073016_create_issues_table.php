@@ -23,7 +23,7 @@ return new class extends Migration
             $table->foreignId('ca_id')->nullable();
             $table->foreignId('pa_id')->nullable();
             $table->foreignId('user_id')->nullable();
-            $table->timestamp('due_date');
+            $table->timestamp('due_date')->nullable();
             $table->timestamps();
         });
     }
