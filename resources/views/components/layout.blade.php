@@ -11,8 +11,6 @@
 </head>
 
 <body>
-
-    <livewire:header />
     <main>
         {{ $slot }}
     </main>
