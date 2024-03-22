@@ -11,10 +11,8 @@
 </head>
 
 <body>
-    <header class="bg-white w-full border-b-4">
-        {{ $header }}
-    </header>
 
+    <livewire:header />
     <main>
         {{ $slot }}
     </main>
