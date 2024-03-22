@@ -3,6 +3,7 @@
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SessionController;
+use App\Livewire\CapaPage;
 use App\Livewire\Dashboard;
 
 /*
@@ -21,6 +22,7 @@ Route::get('/', function () {
 })->middleware('guest');
 
 Route::get('dashboard', Dashboard::class)->name('dashboard')->middleware('auth');
+Route::get('capa', CapaPage::class)->name('capa')->middleware('auth');
 
 // Route::get('dashboard', Dashboard::class)->name('dashboard');
 
