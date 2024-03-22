@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class CorrectiveAction extends Model
 {
     use HasFactory;
+
+    public function issue()
+    {
+        return $this->belongsTo(Issue::class);
+    }
 }
