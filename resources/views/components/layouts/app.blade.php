@@ -13,7 +13,7 @@
         <header class="bg-white w-full mx-auto border-b-4">
             <nav class="w-full flex justify-between p-6 lg:px-8">
                 <div class="flex justify-center items-center" x-data>
-                    <a href="" class="text-2xl text-blue-500 font-bold">
+                    <a href="/dashboard" class="text-2xl text-blue-500 font-bold">
                         CAPA
                     </a>
                 </div>
@@ -41,7 +41,7 @@
                     <span class="font-bold">Dashboard</span>
                 </li>
                 <li>
-                    <a href="/capa" navigate>Data CAPA</a>
+                    <a href="/capa" wire:navigate>Data CAPA</a>
                 </li>
 
                 <li>
