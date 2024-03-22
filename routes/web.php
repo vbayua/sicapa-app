@@ -18,7 +18,7 @@ use App\Livewire\Dashboard;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('guest');
 
 Route::get('dashboard', Dashboard::class)->name('dashboard')->middleware('auth');
 
