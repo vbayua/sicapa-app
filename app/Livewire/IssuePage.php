@@ -31,7 +31,7 @@ class IssuePage extends Component
         $currentPageItems = $this->capa->issues->slice(($currentPage - 1) * $perPage, $perPage)->all();
         $issuesPaginated = new LengthAwarePaginator($currentPageItems, count($this->issues), $perPage);
         return view('livewire.issue-page', [
-            'issues' => $issuesPaginated
+            'issuesPaginated' => $issuesPaginated
         ]);
     }
 }
