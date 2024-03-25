@@ -6,8 +6,9 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Issue</th>
+                    <th>Temuan</th>
                     <th>Status</th>
+                    <th>Kategori</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -18,16 +19,15 @@
                         <th>{{ $issues->firstItem() + $loop->index }}</th>
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->status }}</td>
+                        <td>{{$item->category->name}}</td>
                         <td>
-                            {{-- <a href="/capa/{{ $item->id }}/issues" class="btn btn-primary">
-                                Lihat Capa
-                            </a> --}}
-                            <livewire:modal-component lazy
+                            <x-modal
                                 :title="$item->title"
-                                :analysis="$item->root_cause_analysis"
+                                :root_cause_analysis="$item->root_cause_analysis"
                                 :persyaratan="$item->persyaratan"
-                                :status="$item->status"
-                                :category="$item->category_id" />
+                                :status="$item->status" />
+
+
                             <a href="#" class="btn btn-link">Lihat CAPA</a>
                         </td>
                     </tr>
