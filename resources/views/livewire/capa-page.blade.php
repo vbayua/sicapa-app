@@ -24,7 +24,7 @@
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->status }}</td>
                         <td>
-                            <a href="/capa/{{ $item->id }}/issues" class="btn btn-primary">
+                            <a href="/capa/{{ $item->id }}/issues" class="btn btn-primary" wire:navigate>
                                 Lihat Capa
                             </a>
                         </td>
