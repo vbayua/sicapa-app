@@ -34,8 +34,8 @@
             </nav>
         </header>
 
-        <main class="flex grid-rows-1 lg:h-screen">
-            <ul class="menu flex-shrink w-52 p-4 max-md:hidden min-h-full bg-base-200 text-base-content">
+        <main class="flex grid-rows-1 lg:h-full">
+            <ul class="menu flex-shrink w-52 p-4 max-md:hidden h-screen bg-base-200 text-base-content">
                 <!-- Sidebar content here -->
                 <li class="menu-title">
                     <span class="font-bold">Dashboard</span>
