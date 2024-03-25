@@ -2,7 +2,7 @@
     <h1 class="text-2xl text-blue-500">Data Capa</h1>
 
     <div>
-        
+
     </div>
 
     <div class="overflow-x-auto w-full">
@@ -24,7 +24,7 @@
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->status }}</td>
                         <td>
-                            <a href="#" class="btn btn-primary">
+                            <a href="/capa/{{ $item->id }}/issues" class="btn btn-primary">
                                 Lihat Capa
                             </a>
                         </td>
