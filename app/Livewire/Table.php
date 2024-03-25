@@ -6,14 +6,22 @@ use Livewire\Component;
 
 abstract class Table extends Component
 {
-    public $data;
+    abstract public function query(): \Illuminate\Database\Eloquent\Builder;
 
-    public function mount($data = null)
+    abstract public function columns(): array;
+
+    public function data()
     {
-        $this->data = 'data';
+        return $this->query()->get();
     }
-    public function render()
-    {
-        return view('livewire.table');
-    }
+    // public $data;
+
+    // public function mount($data = null)
+    // {
+    //     $this->data = 'data';
+    // }
+    // public function render()
+    // {
+    //     return view('livewire.table');
+    // }
 }

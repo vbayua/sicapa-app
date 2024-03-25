@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('guest');
 
+Route::get('issues', function() {
+    return view('issue-test');
+});
+
 Route::get('dashboard', Dashboard::class)->name('dashboard')->middleware('auth');
 Route::get('capa', CapaPage::class)->name('capa')->middleware('auth');
 Route::get('/capa/{capa:id}/issues', IssuePage::class)->name('issues')->middleware('auth');
