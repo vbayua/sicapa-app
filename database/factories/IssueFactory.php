@@ -19,7 +19,7 @@ class IssueFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->title,
+            'title' => fake()->word,
             'status' => 'Pending',
             'persyaratan' => fake()->text('50'),
             'root_cause_analysis' => fake()->text('50'),

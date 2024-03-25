@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         $role3 = Role::factory()->create();
 
         User::factory()->create([
+            'email' => 'viskalbayu@proton.me',
             'password' => 'password',
             'role_id' => $role->id
         ]);
@@ -40,17 +41,20 @@ class DatabaseSeeder extends Seeder
             'role_id' => $role3->id
         ]);
 
-
+        $category = Category::factory()->create();
         $capa = Capa::factory()->create();
 
-        Issue::factory(5)->create([
+        Issue::factory(20)->create([
             'capa_id' => $capa->id,
+            'category_id' => $category->id,
         ]);
 
+        $category = Category::factory()->create();
         $capa = Capa::factory()->create();
 
-        Issue::factory(5)->create([
+        Issue::factory(20)->create([
             'capa_id' => $capa->id,
+            'category_id' => $category->id,
         ]);
 
     }
