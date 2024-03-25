@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get('dashboard', Dashboard::class)->name('dashboard')->middleware('auth');
 Route::get('capa', CapaPage::class)->name('capa')->middleware('auth');
-Route::get('/capa/{capa:id}/issues', IssuePage::class)->name('issues')->middleware('auth');
+Route::get('/capa/{capa:id}/issues', IssuePage::class)->name('issues')->middleware('auth')->lazy();
 
 // Route::get('dashboard', Dashboard::class)->name('dashboard');
 

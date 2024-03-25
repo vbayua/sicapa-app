@@ -24,7 +24,7 @@ class IssueFactory extends Factory
             'persyaratan' => fake()->text('50'),
             'root_cause_analysis' => fake()->text('50'),
             'evaluation' => fake()->text('50'),
-            'category_id' => Category::factory()->create(),
+            'category_id' => 1,
         ];
     }
 }
