@@ -14,24 +14,21 @@ class IssuePage extends Component
 
     public Capa $capa;
 
-    public $issues;
+    public $data;
 
     public function mount(Capa $capa)
     {
-        $this->issues = $capa->issues;
-
-
-
+        $this->data = $capa->issues;
     }
     public function render()
     {
         // Manually paginate issues
         $perPage = 10;
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
-        $currentPageItems = $this->capa->issues->slice(($currentPage - 1) * $perPage, $perPage)->all();
-        $issuesPaginated = new LengthAwarePaginator($currentPageItems, count($this->issues), $perPage);
+        $currentPageItems = $this->data->slice(($currentPage - 1) * $perPage, $perPage)->all();
+        $issuesPaginated = new LengthAwarePaginator($currentPageItems, count($this->data), $perPage);
         return view('livewire.issue-page', [
-            'issuesPaginated' => $issuesPaginated
+            'issues' => $issuesPaginated
         ]);
     }
 }
