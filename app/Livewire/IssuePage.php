@@ -15,9 +15,11 @@ class IssuePage extends Component
     public Capa $capa;
 
     public $data;
+    public $capaTitle;
 
     public function mount(Capa $capa)
     {
+        $this->capaTitle = $capa->title;
         $this->data = $capa->issues;
     }
     public function render()
@@ -28,7 +30,9 @@ class IssuePage extends Component
         $currentPageItems = $this->data->slice(($currentPage - 1) * $perPage, $perPage)->all();
         $issuesPaginated = new LengthAwarePaginator($currentPageItems, count($this->data), $perPage);
         return view('livewire.issue-page', [
-            'issues' => $issuesPaginated
+            'issues' => $issuesPaginated,
+            'capaTitle' => $this->capaTitle,
+            'created_at' => $this->capa->created_at,
         ]);
     }
 }
